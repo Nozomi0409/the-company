@@ -3,7 +3,7 @@ require_once "Database.php";
 
 class User extends Database
 {
-
+    //store() allows user to be stored in database.
     public function store($request)
     {
 
@@ -20,6 +20,7 @@ class User extends Database
             header('location: ../views');
             exit;
         } else {
+            #Display error message
             die('Error creating the user: ' . $this->conn->error);
         }
     }
